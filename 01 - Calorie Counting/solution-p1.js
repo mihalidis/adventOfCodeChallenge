@@ -1,4 +1,5 @@
-const { input } = require('./input');
+import { parseLines } from "../utils/index.js";
+const input = parseLines("./01 - Calorie Counting/input.txt", true);
 
 const elvesAndCalories = input.map(test => {
     return test.split('\n').map(x => parseInt(x.replace("\r", "")));
