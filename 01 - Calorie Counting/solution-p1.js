@@ -1,25 +1,26 @@
 import { parseLines } from "../utils/index.js";
-const input = parseLines("./01 - Calorie Counting/input.txt", true);
 
-const elvesAndCalories = input.map(test => {
-    return test.split('\n').map(x => parseInt(x.replace("\r", "")));
-});
+const lines = parseLines("./01 - Calorie Counting/input.txt", true);
 
+const ObjectArray = [...Object.values(lines)];
 
-const singleElf = [];
-let temporaryElf = [];
+const allElves = [];
+let elfCarrier = [];
 
-elvesAndCalories[0].forEach(x => {
-    if (!isNaN(x)) {
-        temporaryElf.push(x);
-    } else {
-        singleElf.push(test);
-        temporaryElf = [];
-    }
+ObjectArray.map((key, value) => {
+	if (key !== "") {
+		elfCarrier.push(key);
+	} else {
+		allElves.push(elfCarrier);
+    elfCarrier = [];
+	}
 });
 
 const totalCaloriesForElves = [];
-singleElf.forEach(arr => totalCaloriesForElves.push(arr.reduce((acc, x) => x+acc, 0)));
+
+Object.values(allElves).forEach(elf => {
+	totalCaloriesForElves.push(elf.reduce((acc, item) => acc + parseInt(item), 0))
+})
 
 console.log(Math.max(...totalCaloriesForElves));
 

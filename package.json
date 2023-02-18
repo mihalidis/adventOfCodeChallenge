@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/mihalidis/adventOfCodeChallenge/issues"
   },
-  "homepage": "https://github.com/mihalidis/adventOfCodeChallenge#readme"
+  "homepage": "https://github.com/mihalidis/adventOfCodeChallenge#readme",
+  "dependencies": {}
 }
