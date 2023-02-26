@@ -16,8 +16,6 @@ const splittedArray = input.split("\n").reduce((acc, item) => {
 	
 	const findLowercaseLetterIndex = lowercaseLetters.findIndex(item => item === sharedItem);
 	const findUppercaseLetterIndex = uppercaseLetters.findIndex(item => item === sharedItem);
-
-	let final = 0;
 	
 	if (findLowercaseLetterIndex !== -1) {
 		acc += (findLowercaseLetterIndex + 1)
