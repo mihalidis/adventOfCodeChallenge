@@ -11,10 +11,10 @@ const containersArea = containerArray[containerArray.length-1]
 	.split(' ')
 	.filter(x => x !== '')
 	.reduce((acc, item) => {
-	acc[item] = [];
-
-	return acc;
-}, {});
+		acc[item] = [];
+		
+		return acc;
+	}, {});
 
 // work directory area
 const newContainersArray = [];
